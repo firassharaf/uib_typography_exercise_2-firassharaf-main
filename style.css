@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&display=swap');
+
+/* reset */
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Banner + Navbar */
+nav {
+    padding: 10px;
+    margin: 10px;
+}
+nav a {
+    padding: 10px 15px;
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background: tomato;
+    border-radius: 3px;
+}
+nav a:first-child {
+    margin-left: 0;
+}
+nav a:hover {
+    color: tomato;
+    background: white;
+}
+
+
+/* sections */
+
+#children, #romance {
+    margin: 20px;
+}
+section h1 {
+    margin: 20px 0;
+    padding: 10px;
+    background: lightblue;
+}
+
+/* icons with pseudo classes */ 
+#children > h1::before, #children > h1::after {
+    content: "\f1ae";
+    font-family: "Font Awesome 5 Free";
+    padding: 0 10px;
+    color: dodgerblue;
+}
+#romance > h1::before, #romance > h1::after {
+    content: '\f5da';
+    font-family: "Font Awesome 5 Free";
+    padding: 0 10px;
+    color: tomato;
+}
+
+
+/* book content*/
+.book-content {
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px 0;
+    width: 100%;
+}
+.book-content > div {
+    text-align: center;
+    margin: 20px 0;
+}
+.book-content > div img {
+    width: 250px;
+    box-shadow: 5px 5px 10px #9d9b9b, -5px -5px 10px gray;   
+}
+.book-content > div img:hover {
+    box-shadow: 2px 2px 5px black, -2px -2px 5px gray;   
+    cursor: pointer;
+}
+
+.book-content > blockquote {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    margin: 30px 0;
+}
+.book-content > blockquote i {
+    color: #ff00ae;
+}
+
+.book-content > p {
+    width: calc(50% - 2px);
+    display: inline-block;
+    font-family: 'Josefin Slab', serif;
+    font-size: 18px;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+.book-content > p:nth-of-type(1) {
+    padding-right: 25px;
+}
+.book-content > p:nth-of-type(2) {
+    padding-left: 25px;
+}
+.book-content a {
+    text-decoration: none;
+    color: white;
+    background: tomato;
+    padding: 17px;
+    border-radius: 5px;
+    font-size: 18px;
+    display: inline-block;
+    height: 70px;
+}
+.book-content a i {
+    vertical-align: middle;
+    margin-right: 10px; 
+}
+
+.book-content a i:nth-of-type(2) {
+    display: none;
+}
+
+/* read online links */
+.book-content a:hover {
+    color: tomato;
+    background: white;
+    border: 2px solid tomato;
+}
+.book-content a:hover i:nth-of-type(1){
+    display: none;
+}
+.book-content a:hover i:nth-of-type(2){
+    display: inline-block;
+}
+
+
+/* Footer */
+
+footer {
+    margin: 0 auto;
+    background: #d5d5d5;
+    text-align: center;
+    padding: 20px;
+}
